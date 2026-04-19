@@ -1,0 +1,11 @@
+.env
+backend/.env
+frontend/.env
+worker/.env
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+uploads/
+.DS_Store
+*.log
