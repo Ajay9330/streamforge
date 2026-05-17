@@ -14,7 +14,7 @@ import { formatDuration } from '../lib/time.js';
 
 import QualitySelector from './QualitySelector.jsx';
 
-export default function Player({ autoPlay = false, video }) {
+function formatLevelLabel(level) {
   if (!level) {
     return 'Auto';
   }
@@ -28,10 +28,12 @@ export default function Player({ autoPlay = false, video }) {
 }
 
 export default function Player({
+  autoPlay = false,
   onQualityLevelChange,
   playbackMode,
   qualityLevel,
-  src
+  src,
+  video
 }) {
   const containerRef = useRef(null);
   const dashRef = useRef(null);
